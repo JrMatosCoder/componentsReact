@@ -1,0 +1,60 @@
+/* .textSlider {
+  display: flex;
+  overflow: hidden;
+} */
+
+.textSlider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.textSlider button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.textSlider button:hover {
+  color: white;
+}
+
+.textSliderItem {
+  flex-shrink: 0;
+  opacity: 1;
+  color: white;
+}
+
+.slideIn {
+  animation: slide-in 0.2s ease-in-out forwards;
+}
+
+.slideOut {
+  animation: slide-out 0.2s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
